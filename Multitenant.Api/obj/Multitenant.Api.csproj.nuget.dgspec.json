@@ -4,14 +4,14 @@
     "C:\\Users\\iammu\\source\\repos\\Multitenant.Api\\Multitenant.Api\\Multitenant.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\iammu\\source\\repos\\Multitenant.Api\\Multitenant.Api\\Multitenant.Api.csproj": {
+    "C:\\Users\\iammu\\source\\repos\\Multitenant.Api\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\iammu\\source\\repos\\Multitenant.Api\\Multitenant.Api\\Multitenant.Api.csproj",
-        "projectName": "Multitenant.Api",
-        "projectPath": "C:\\Users\\iammu\\source\\repos\\Multitenant.Api\\Multitenant.Api\\Multitenant.Api.csproj",
+        "projectUniqueName": "C:\\Users\\iammu\\source\\repos\\Multitenant.Api\\Core\\Core.csproj",
+        "projectName": "Core",
+        "projectPath": "C:\\Users\\iammu\\source\\repos\\Multitenant.Api\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\iammu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\iammu\\source\\repos\\Multitenant.Api\\Multitenant.Api\\obj\\",
+        "outputPath": "C:\\Users\\iammu\\source\\repos\\Multitenant.Api\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\iammu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,10 +39,176 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\iammu\\source\\repos\\Multitenant.Api\\Infrastructure\\Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\iammu\\source\\repos\\Multitenant.Api\\Infrastructure\\Infrastructure.csproj",
+        "projectName": "Infrastructure",
+        "projectPath": "C:\\Users\\iammu\\source\\repos\\Multitenant.Api\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\iammu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\iammu\\source\\repos\\Multitenant.Api\\Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\iammu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\iammu\\source\\repos\\Multitenant.Api\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\iammu\\source\\repos\\Multitenant.Api\\Core\\Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\iammu\\source\\repos\\Multitenant.Api\\Multitenant.Api\\Multitenant.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\iammu\\source\\repos\\Multitenant.Api\\Multitenant.Api\\Multitenant.Api.csproj",
+        "projectName": "Multitenant.Api",
+        "projectPath": "C:\\Users\\iammu\\source\\repos\\Multitenant.Api\\Multitenant.Api\\Multitenant.Api.csproj",
+        "packagesPath": "C:\\Users\\iammu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\iammu\\source\\repos\\Multitenant.Api\\Multitenant.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\iammu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\iammu\\source\\repos\\Multitenant.Api\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\iammu\\source\\repos\\Multitenant.Api\\Infrastructure\\Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[5.6.3, )"
+              "version": "[6.2.1, )"
             }
           },
           "imports": [
