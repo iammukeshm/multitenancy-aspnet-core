@@ -14,6 +14,10 @@ namespace Infrastructure.Extensions
             var options = services.GetOptions<TenantSettings>(nameof(TenantSettings));
             var defaultConnectionString = options.Defaults?.ConnectionString;
             var defaultDbProvider = options.Defaults?.DBProvider;
+            if (defaultDbProvider.ToLower() == "mssql")
+            {
+                services.AddDbContext<ApplicationDbContext>(m => m.UseSqlServer(e => e.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
+            }
             var tenants = options.Tenants;
             foreach (var tenant in tenants)
             {
@@ -25,11 +29,7 @@ namespace Infrastructure.Extensions
                 else
                 {
                     connectionString = tenant.ConnectionString;
-                }
-                if (defaultDbProvider.ToLower() == "mssql")
-                {
-                    services.AddDbContext<ApplicationDbContext>(m => m.UseSqlServer(e => e.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
-                }
+                }               
                 using var scope = services.BuildServiceProvider().CreateScope();
                 var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
                 dbContext.Database.SetConnectionString(connectionString);
